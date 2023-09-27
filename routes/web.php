@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\PropertyListingsController;
+use App\Http\Controllers\PropertyListingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', [PropertyListingController::class, 'index'])->name('property_list');
+Route::delete('/property/{id}', [PropertyListingController::class, 'destroy']);
