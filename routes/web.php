@@ -14,9 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/', [PropertyListingController::class, 'index']);
+Route::get('/', [PropertyListingController::class, 'index'])->name('property_list');
 Route::delete('/property/{id}', [PropertyListingController::class, 'destroy']);

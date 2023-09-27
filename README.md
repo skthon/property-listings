@@ -1,5 +1,5 @@
 # Improvements
-- Fix redirect for delete property listings action  with success message
+- Show success message on deleting property listing
 - Fix UI styling issues
 - Backend
   - Optimize the command class by moving the inertProperties and insertPropertyType to service classes.

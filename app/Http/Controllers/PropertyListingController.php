@@ -31,6 +31,6 @@ class PropertyListingController extends Controller
         $property = PropertyListing::find($id);
         $property->delete();
 
-        return redirect('/')->with('message', 'Property Deleted Successfully');
+        return Inertia::location(route('property_list'));
     }
 }
